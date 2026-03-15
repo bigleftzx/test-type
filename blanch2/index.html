@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中华美食菜谱系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🍜 中华美食菜谱系统</h1>
+            <nav class="nav">
+                <button class="nav-btn active" data-category="all">全部菜谱</button>
+                <button class="nav-btn" data-category="sichuan">川菜</button>
+                <button class="nav-btn" data-category="shandong">鲁菜</button>
+                <button class="nav-btn" data-category="cantonese">粤菜</button>
+                <button class="nav-btn" data-category="jiangsu">苏菜</button>
+                <button class="nav-btn" data-category="zhejiang">浙菜</button>
+                <button class="nav-btn" data-category="fujian">闽菜</button>
+                <button class="nav-btn" data-category="hunan">湘菜</button>
+                <button class="nav-btn" data-category="anhui">徽菜</button>
+                <button class="nav-btn" data-category="homestyle">家常菜</button>
+            </nav>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索菜谱...">
+                <button id="searchBtn">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h2>探索中华八大菜系</h2>
+                <p>汇聚传统名菜与民间家常，让美食触手可及</p>
+            </section>
+
+            <section class="recipes-section">
+                <div class="section-header">
+                    <h3 id="categoryTitle">全部菜谱</h3>
+                    <span id="recipeCount"></span>
+                </div>
+                <div class="recipes-grid" id="recipesGrid">
+                    <!-- 菜谱卡片将在这里动态生成 -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 菜谱详情模态框 -->
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="recipe-detail" id="recipeDetail">
+                <!-- 详情内容将在这里动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 中华美食菜谱系统 - 传承美食文化</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
